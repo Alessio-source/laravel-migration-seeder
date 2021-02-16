@@ -7,6 +7,15 @@
         <title>Home</title>
     </head>
     <body>
-        
+        @foreach ($data as $item)
+            <div class="container-news">
+                <h2>{{ $item->title }}</h2>
+                <h3>{{ $item->subtitle }}</h3>
+                <p>{{ $item->text }}</p>
+                <h5>{{ $item->author }}</h5>
+                <p>{{ $item->created_at }}</p>
+                <hr>
+            </div>
+        @endforeach
     </body>
 </html>
